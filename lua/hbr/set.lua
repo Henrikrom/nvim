@@ -22,9 +22,11 @@ vim.opt.ignorecase = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "no"
+vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 --vim.opt.colorcolumn = "80"
 vim.lsp.diagnostic.show_virtual_text = true
 
+-- vim.opt.list = true
+-- vim.opt.listchars:append("nbsp:.")

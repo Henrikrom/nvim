@@ -38,7 +38,7 @@ return {
 
             require('lspconfig').omnisharp.setup({
                 cmd = { "omnisharp" },  -- This assumes omnisharp is available in your PATH
-                filetypes = { "cs" },
+                filetypes = { "cs", "razor" },
                 on_attach = on_attach
             })
 

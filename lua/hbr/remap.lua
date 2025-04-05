@@ -7,7 +7,7 @@ end, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>,", "<C-o>")
 vim.keymap.set("n", "<leader>.", "<C-i>")
 
-vim.keymap.set("n", "<C-\\>", ":vsplit<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>\\", ":vsplit<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>v", ":split<CR>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<leader>t", function()
@@ -29,10 +29,15 @@ vim.keymap.set("n", "<leader>f", ":NvimTreeFocus<CR>", { noremap = true, silent 
 
 vim.api.nvim_set_keymap('n', '<leader>cd', ':cd %:p:h<CR>', { noremap = true, silent = true })
 
-vim.keymap.set("n", "<leader>h", "<C-w>h", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>j", "<C-w>j", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>k", "<C-w>k", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>l", "<C-w>l", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>h", "<C-w>h", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>j", "<C-w>j", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>k", "<C-w>k", { noremap = true, silent = true })
+-- vim.keymap.set("n", "<leader>l", "<C-w>l", { noremap = true, silent = true })
+
+vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-l>", ":wincmd l<CR>", { noremap = true, silent = true })
 
 vim.keymap.set('n', '<leader>q', ':q<CR>', { noremap = true, silent = true })
 
@@ -63,3 +68,5 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+
