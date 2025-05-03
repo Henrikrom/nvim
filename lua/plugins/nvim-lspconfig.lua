@@ -18,7 +18,6 @@ return {
             require('mason-lspconfig').setup({
                 ensure_installed = {
                     "lua_ls"
-
                 }
             })
 
@@ -33,6 +32,10 @@ return {
             end
 
             require("lspconfig").lua_ls.setup {
+                on_attach = on_attach
+            }
+
+            require("lspconfig").gopls.setup {
                 on_attach = on_attach
             }
 
