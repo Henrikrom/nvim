@@ -71,5 +71,14 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Keep cursor at original position when deleting
 vim.keymap.set('n', 'di"', 'mzdi"`z', { noremap = true, silent = true })
+vim.keymap.set('n', 'di(', 'mzdi(`z', { noremap = true, silent = true })
+vim.keymap.set('n', 'di)', 'mzdi)`z', { noremap = true, silent = true })
+vim.keymap.set('n', 'di{', 'mzdi{`z', { noremap = true, silent = true })
+vim.keymap.set('n', 'di}', 'mzdi}`z', { noremap = true, silent = true })
+
 vim.keymap.set('n', 'da"', 'mzda"`z', { noremap = true, silent = true })
+vim.keymap.set('n', 'da(', 'mzda(`z', { noremap = true, silent = true })
+vim.keymap.set('n', 'da)', 'mzda)`z', { noremap = true, silent = true })
+vim.keymap.set('n', 'da{', 'mzda{`z', { noremap = true, silent = true })
+vim.keymap.set('n', 'da}', 'mzda}`z', { noremap = true, silent = true })
 
