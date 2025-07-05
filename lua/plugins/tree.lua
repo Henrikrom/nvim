@@ -15,7 +15,7 @@ return {
 
       actions = {
           open_file = {
-              quit_on_open = true, -- Closes nvim-tree when opening a file
+              quit_on_open = false, -- Closes nvim-tree when opening a file
           },
       },
 

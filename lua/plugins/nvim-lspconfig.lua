@@ -15,6 +15,8 @@ return {
         },
         config = function()
             require('mason').setup()
+
+
             require('mason-lspconfig').setup({
                 ensure_installed = {
                     "lua_ls"
@@ -60,35 +62,35 @@ return {
                 on_attach = on_attach
             })
 
-            require('roslyn').setup {
-                cmd = {
-                    '--stdio';
-                    '--logLevel=Information',
-                    '--extensionLogDirectory=' .. vim.fs.dirname(vim.lsp.get_log_path()),
-                    '--razorSourceGenerator=' .. vim.fs.joinpath(
-                    vim.fn.stdpath 'data' --[[@as string]],
-                    'mason',
-                    'packages',
-                    'roslyn',
-                    'libexec',
-                    'Microsoft.CodeAnalysis.Razor.Compiler.dll'
-                    ),
-                    '--razorDesignTimePath=' .. vim.fs.joinpath(
-                    vim.fn.stdpath 'data' --[[@as string]],
-                    'mason',
-                    'packages',
-                    'rzls',
-                    'libexec',
-                    'Targets',
-                    'Microsoft.NET.Sdk.Razor.DesignTime.targets'
-                    ),
-                },
-                config = {
-                    --[[ the rest of your roslyn config ]]
-                    handlers = require 'rzls.roslyn_handlers',
-                },
-                on_attach = on_attach
-            }
+            -- require('roslyn').setup {
+            --     cmd = {
+            --         '--stdio';
+            --         '--logLevel=Information',
+            --         '--extensionLogDirectory=' .. vim.fs.dirname(vim.lsp.get_log_path()),
+            --         '--razorSourceGenerator=' .. vim.fs.joinpath(
+            --         vim.fn.stdpath 'data' --[[@as string]],
+            --         'mason',
+            --         'packages',
+            --         'roslyn',
+            --         'libexec',
+            --         'Microsoft.CodeAnalysis.Razor.Compiler.dll'
+            --         ),
+            --         '--razorDesignTimePath=' .. vim.fs.joinpath(
+            --         vim.fn.stdpath 'data' --[[@as string]],
+            --         'mason',
+            --         'packages',
+            --         'rzls',
+            --         'libexec',
+            --         'Targets',
+            --         'Microsoft.NET.Sdk.Razor.DesignTime.targets'
+            --         ),
+            --     },
+            --     config = {
+            --         --[[ the rest of your roslyn config ]]
+            --         handlers = require 'rzls.roslyn_handlers',
+            --     },
+            --     on_attach = on_attach
+            -- }
 
             local ok, luasnip = pcall(require, "luasnip")
             if not ok then
